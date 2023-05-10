@@ -39,7 +39,7 @@ while True:
         except ValueError:
             print("\n[The input is not a number!]\n")
         else:
-            if 1 <= choice < 4:
+            if 1 <= choice < 5:
                 break
             else:
                 print("\n[The input is not from 1-4]\n")
@@ -50,21 +50,23 @@ while True:
                     
     while True:
         try:
-            n1, n2 = map(int,input("Enter two integer number(put space in between):").split())
+            n1, n2 = map(float,input("\nEnter two integer number(put space in between):").split())
         except ValueError:
-            print("\n[The input is not a number!]\n")
+            print("\n[The input is not a number or not enough values inputted!]\n")
         else:
-            break   
-            #try:
-              #  print("\n[The input is not a number!]\n")
-             #   n1, n2 = map(int,input("Enter two integer number(put space in between):").split())
-            #except ValueError:
-            #    print("\n[The input is not a number!]\n")
-            #else:         
-             #   break  
+            break    
     if choice == 1:
         sum = Add()
         print("\nResult:",sum)
+    elif choice==2:
+        diff=Subtract()
+        print ("\nResult:",diff)
+    elif choice==3:
+        prod=Multiply()
+        print ("\nResult:",prod)
+    elif choice ==4:
+        quot=Divide()
+        print ("\nResult:",quot)
 
         
 
