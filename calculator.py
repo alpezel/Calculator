@@ -15,6 +15,24 @@ def display_menu():
     print ("     3.Multiply (x)")
     print ("     4.Divide (÷)")
     print ("\n===================================================")
+
+def Add():
+    result = n1 + n2
+    return result
+def Subtract():
+    result = n1 - n2
+    return result
+def Multiply():
+    result = n1 * n2
+    return result
+def Divide():
+    result = n1 / n2
+    return result
+
 while True:
     display_menu()
-    choice= input("What Math Operation will you choose? (1-4):")
+    choice = int(input("What Math Operation will you choose? (1-4):"))
+    n1, n2 = map(int,input("Enter two integer number(put space in between):").split())
+    if choice == 1:
+        sum = Add()
+        print("\nResult:",sum)
