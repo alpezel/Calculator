@@ -48,9 +48,20 @@ while True:
                 except ValueError:
                     print("\n[The input is not a number!]\n")
                     
-     
-    n1, n2 = map(int,input("Enter two integer number(put space in between):").split())
-                
+    while True:
+        try:
+            n1, n2 = map(int,input("Enter two integer number(put space in between):").split())
+        except ValueError:
+            print("\n[The input is not a number!]\n")
+        else:
+            break   
+            #try:
+              #  print("\n[The input is not a number!]\n")
+             #   n1, n2 = map(int,input("Enter two integer number(put space in between):").split())
+            #except ValueError:
+            #    print("\n[The input is not a number!]\n")
+            #else:         
+             #   break  
     if choice == 1:
         sum = Add()
         print("\nResult:",sum)
