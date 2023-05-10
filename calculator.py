@@ -5,3 +5,16 @@
 # Ask if the user wants to try again or not (yes or no) 
 # use exeption if the input is not yes or no; display error message and try again
 #if yes repeat program; if no display "Thank you!" 
+
+def display_menu():
+    print ("===================================================")
+    print ("                      MENU                         ")
+    print ("===================================================")
+    print ("\n     1.Add (+)")
+    print ("     2.Subtract (-)")
+    print ("     3.Multiply (x)")
+    print ("     4.Divide (÷)")
+    print ("\n===================================================")
+while True:
+    display_menu()
+    choice= input("What Math Operation will you choose? (1-4):")
