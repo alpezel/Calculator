@@ -29,10 +29,36 @@ def Divide():
     result = n1 / n2
     return result
 
+
+
 while True:
     display_menu()
-    choice = int(input("What Math Operation will you choose? (1-4):"))
+    while True:
+        try:
+            choice = int(input("What Math Operation will you choose? (1-4):"))
+        except ValueError:
+            print("\n[The input is not a number!]\n")
+        else:
+            if 1 <= choice < 4:
+                break
+            else:
+                print("\n[The input is not from 1-4]\n")
+                try:
+                    choice = int(input("What Math Operation will you choose? (1-4):"))
+                except ValueError:
+                    print("\n[The input is not a number!]\n")
+                    
+     
     n1, n2 = map(int,input("Enter two integer number(put space in between):").split())
+                
     if choice == 1:
         sum = Add()
         print("\nResult:",sum)
+
+        
+
+
+    
+    
+         
+       
