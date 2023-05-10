@@ -5,7 +5,7 @@
 # Ask if the user wants to try again or not (yes or no) 
 # use exeption if the input is not yes or no; display error message and try again
 #if yes repeat program; if no display "Thank you!" 
-
+boarder = "==================================================="
 def display_menu():
     print ("===================================================")
     print ("                      MENU                         ")
@@ -29,10 +29,7 @@ def Divide():
     result = n1 / n2
     return result
 
-
-
-while True:
-    display_menu()
+def choice():
     while True:
         try:
             choice = int(input("What Math Operation will you choose? (1-4):"))
@@ -47,7 +44,9 @@ while True:
                     choice = int(input("What Math Operation will you choose? (1-4):"))
                 except ValueError:
                     print("\n[The input is not a number!]\n")
-                    
+    return choice  
+    
+def inputs():
     while True:
         try:
             n1, n2 = map(float,input("\nEnter two integer number(put space in between):").split())
@@ -55,23 +54,34 @@ while True:
             print("\n[The input is not a number or not enough values inputted!]\n")
         else:
             break    
+    
+    return inputs
+
+while True:
+    display_menu()
+    choice()
+    inputs()
     if choice == 1:
         sum = Add()
         print("\nResult:",sum)
+        print(boarder)
     elif choice==2:
         diff=Subtract()
         print ("\nResult:",diff)
+        print(boarder)
     elif choice==3:
         prod=Multiply()
         print ("\nResult:",prod)
+        print(boarder)
     elif choice ==4:
         quot=Divide()
         print ("\nResult:",quot)
+        print(boarder)
 
-        
-
-
-    
-    
-         
-       
+    tryagain= input("\nDo you want to try again? (yes/no):")
+    while tryagain.lower() != "yes" and tryagain.lower() != "no":
+        tryagain= input("\nDo you want to try again? (yes/no):")
+    if tryagain.lower() == "no":
+        print ("\nThank you!")
+        print(boarder)
+        break
