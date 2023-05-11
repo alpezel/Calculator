@@ -5,9 +5,9 @@
 # Ask if the user wants to try again or not (yes or no) 
 # use exeption if the input is not yes or no; display error message and try again
 #if yes repeat program; if no display "Thank you!" 
-boarder = "==================================================="
+boarder = "\n\033[0;39m==================================================="
 def display_menu():
-    print ("===================================================")
+    print ("\n\033[0;39m===================================================")
     print ("                      MENU                         ")
     print ("===================================================")
     print ("\n     1.Add (+)")
@@ -33,30 +33,25 @@ while True:
     display_menu()
     while True:
         try:
-            choice = int(input("What Math Operation will you choose? (1-4):"))
-        except ValueError:
-            print("\n[The input is not a number!]\n")
-        else:
-            if 1 <= choice < 5:
+            choice = int(input("\n\033[0;33mWhat Math Operation will you choose? (1-4): \033[0;39m"))
+            if choice < 5 and choice >= 1:
                 break
-            else:
-                print("\n[The input is not from 1-4]\n")
-                try:
-                    choice = int(input("What Math Operation will you choose? (1-4):"))
-                except ValueError:
-                    print("\n[The input is not a number!]\n")
+        except ValueError:
+            print("\n\033[0;31m[The input is not a number!]")
+        else:  
+            print("\n\033[0;31m[The input is not from 1-4]")
 
     while True:
         try:
-            n1, n2 = map(float,input("\nEnter two integer number(put space in between):").split())
+            n1, n2 = map(float,input("\n\033[0;33mEnter two integer number(put space in between): \033[0;39m").split())
         except ValueError:
-            print("\n[The input is not a number or not enough values inputted!]\n")
+            print("\n\033[0;31m[The input is not a number or not enough values inputted!]")
         else:
             break    
 
     if choice == 1:
         sum = Add()
-        print("\nResult:",sum)
+        print("\n\033[0;36mResult:",sum)
         print(boarder)
     elif choice==2:
         diff=Subtract()
@@ -71,10 +66,12 @@ while True:
         print ("\nResult:",quot)
         print(boarder)
 
-    tryagain= input("\nDo you want to try again? (yes/no):")
+    tryagain= input("\n\033[0;32mDo you want to try again? (yes or no): \033[0;39m")
     while tryagain.lower() != "yes" and tryagain.lower() != "no":
-        tryagain= input("\nDo you want to try again? (yes/no):")
+        print ("\n\033[0;31m[The input is not (yes or no)]")
+        tryagain= input("\n\033[0;32mDo you want to try again? (yes or no): \033[0;39m")
     if tryagain.lower() == "no":
-        print ("\nThank you!")
-        print(boarder)
+        print(boarder,"\n")
+        print ("\033[0;34mThank you!")
+        print(boarder,"\n")
         break
