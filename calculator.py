@@ -41,7 +41,7 @@ while True:
     # use exception if the input is not number; display error message and try again
     while True:
         try:
-            n1, n2 = map(float,input("\n\033[0;33mEnter two integer number(put space in between): \033[0;39m").split())
+            n1, n2 = map(float,input("\n\033[0;33mEnter two numbers (put space in between): \033[0;39m").split())
         except ValueError:
             print("\n\033[0;31m[The input is not a number or not enough values inputted!]")
         else:
@@ -54,15 +54,15 @@ while True:
         print(boarder)
     elif choice==2:
         diff=Subtract()
-        print ("\nResult:",diff)
+        print ("\n\033[0;36mResult:",diff)
         print(boarder)
     elif choice==3:
         prod=Multiply()
-        print ("\nResult:",prod)
+        print ("\n\033[0;36mResult:",prod)
         print(boarder)
     elif choice ==4:
         quot=Divide()
-        print ("\nResult:",quot)
+        print ("\n\033[0;36mResult:",quot)
         print(boarder)
 
     # Ask if the user wants to try again or not (yes or no) 
