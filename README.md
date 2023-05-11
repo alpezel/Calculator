@@ -11,9 +11,11 @@
 7. Use Python Function and appropriate Exceptions to capture errors during runtime.
 
 
-# Example Output Video
+# Example Output 
 
-
+![](calc/p1.PNG)
+![](calc/p2.PNG)
+![](calc/p3.PNG)
 
 
 # How To Use / Run
