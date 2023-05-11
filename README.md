@@ -13,9 +13,12 @@
 
 # Example Output 
 
-![](calc/p1.PNG)
-![](calc/p2.PNG)
-![](calc/p3.PNG)
+### Output in Exception handling for User Input and Addition of Numbers
+![](calc/p1.png)
+### Output in Exception handling on try again and Subtraction of Numbers
+![](calc/p2.png)
+### Output in Multiplication & Division of Numbers and Text before the program exits
+![](calc/p3.png)
 
 
 # How To Use / Run
